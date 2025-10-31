@@ -229,7 +229,7 @@ async function updateAIDecision() {
 
         // 更新订单簿
         document.getElementById('ai-liquidity-signal').textContent = data.orderbook.liquidity_signal;
-        document.getElementById('ai-imbalance').textContent = (data.orderbook.imbalance * 100).toFixed(2) + '%';
+        document.getElementById('ai-imbalance').textContent = data.orderbook.imbalance.toFixed(2) + '%';
         document.getElementById('ai-resistance-walls').textContent = data.orderbook.resistance_walls_count;
         document.getElementById('ai-support-walls').textContent = data.orderbook.support_walls_count;
         document.getElementById('ai-orderbook-insight').textContent = data.orderbook.insight || '-';
