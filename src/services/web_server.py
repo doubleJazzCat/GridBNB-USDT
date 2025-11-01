@@ -479,7 +479,7 @@ async def handle_log(request):
                         actionEl.style.color = suggestion.action === 'buy' ? '#10b981' :
                                                 suggestion.action === 'sell' ? '#ef4444' : '#6b7280';
 
-                        document.getElementById('ai-confidence').textContent = `${{(suggestion.confidence * 100).toFixed(0)}}%`;
+                        document.getElementById('ai-confidence').textContent = `${{suggestion.confidence.toFixed(0)}}%`;
                         document.getElementById('ai-risk-level').textContent = suggestion.risk_level || '--';
                         document.getElementById('ai-reason').textContent = suggestion.reason || '--';
 
